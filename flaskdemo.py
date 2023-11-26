@@ -13,7 +13,8 @@ def home():
 
 @app.route('/about')
 def about():
-    return "I am still working on this"
+    # return "I am still working on this"
+    return render_template("about.html")
 
 
 @app.route('/search', methods=['POST', 'GET'])
@@ -50,4 +51,4 @@ def get_page(search_term):
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=False, port=5001)
